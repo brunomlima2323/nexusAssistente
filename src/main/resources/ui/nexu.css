@@ -1,0 +1,208 @@
+/* Nexu - tema escuro com detalhes em azul e ciano */
+
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #050913, #0a1324 60%, #06101d);
+    -fx-font-family: "Segoe UI", "Helvetica Neue", "Ubuntu", sans-serif;
+    -fx-font-size: 13px;
+}
+
+.label {
+    -fx-text-fill: #cfe8ff;
+}
+
+/* ---------- cabeçalho ---------- */
+.header {
+    -fx-padding: 18 22 14 22;
+}
+
+.title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #00e5ff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 229, 255, 0.55), 16, 0.2, 0, 0);
+}
+
+.subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #5f8fb3;
+}
+
+.state-chip {
+    -fx-padding: 6 14 6 12;
+    -fx-background-color: rgba(0, 229, 255, 0.07);
+    -fx-background-radius: 16;
+    -fx-border-color: rgba(0, 229, 255, 0.35);
+    -fx-border-radius: 16;
+}
+
+.state-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9fe9ff;
+}
+
+.state-dot { -fx-fill: #1565c0; }
+.state-listening { -fx-fill: #00e5ff; -fx-effect: dropshadow(gaussian, #00e5ff, 8, 0.4, 0, 0); }
+.state-processing { -fx-fill: #2979ff; -fx-effect: dropshadow(gaussian, #2979ff, 8, 0.4, 0, 0); }
+.state-speaking { -fx-fill: #84ffff; -fx-effect: dropshadow(gaussian, #84ffff, 8, 0.4, 0, 0); }
+.state-paused, .state-shutting_down { -fx-fill: #546e7a; }
+.state-error { -fx-fill: #ff5252; }
+.state-initializing { -fx-fill: #1565c0; }
+
+/* ---------- painéis ---------- */
+.panel {
+    -fx-padding: 16;
+    -fx-background-color: rgba(13, 26, 46, 0.78);
+    -fx-background-radius: 12;
+    -fx-border-color: rgba(41, 121, 255, 0.28);
+    -fx-border-radius: 12;
+}
+
+.section-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4fc3f7;
+}
+
+.mode-label {
+    -fx-font-size: 15px;
+    -fx-text-fill: #e1f5fe;
+    -fx-text-alignment: center;
+}
+
+.partial-label {
+    -fx-font-style: italic;
+    -fx-text-fill: #6fa8c9;
+    -fx-text-alignment: center;
+}
+
+.timer-label {
+    -fx-font-size: 30px;
+    -fx-font-family: "Consolas", "Menlo", "DejaVu Sans Mono", monospace;
+    -fx-text-fill: #00e5ff;
+    -fx-padding: 6 18 6 18;
+    -fx-background-color: rgba(0, 229, 255, 0.08);
+    -fx-background-radius: 10;
+    -fx-border-color: rgba(0, 229, 255, 0.45);
+    -fx-border-radius: 10;
+}
+
+/* ---------- histórico ---------- */
+.history {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.history .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.history .scroll-bar .thumb {
+    -fx-background-color: rgba(0, 229, 255, 0.25);
+    -fx-background-radius: 4;
+}
+
+.history .scroll-bar .increment-button,
+.history .scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+.entry-cell,
+.entry-cell:filled,
+.entry-cell:selected,
+.entry-cell:focused,
+.entry-cell:hover {
+    -fx-background-color: transparent;
+    -fx-padding: 4 6 4 6;
+}
+
+.bubble {
+    -fx-padding: 8 12 8 12;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.bubble-user {
+    -fx-background-color: #12304a;
+    -fx-border-color: rgba(79, 195, 247, 0.35);
+}
+
+.bubble-nexu {
+    -fx-background-color: rgba(0, 229, 255, 0.08);
+    -fx-border-color: rgba(0, 229, 255, 0.55);
+}
+
+.bubble-system {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.bubble-who {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4fc3f7;
+}
+
+.bubble-nexu .bubble-who { -fx-text-fill: #00e5ff; }
+.bubble-system .bubble-who { -fx-text-fill: #546e7a; }
+
+.bubble-time {
+    -fx-font-size: 10px;
+    -fx-text-fill: #46647d;
+}
+
+.bubble-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #e3f2fd;
+}
+
+.bubble-system .bubble-text {
+    -fx-font-size: 12px;
+    -fx-font-style: italic;
+    -fx-text-fill: #78909c;
+}
+
+/* ---------- rodapé ---------- */
+.footer {
+    -fx-padding: 14 22 18 22;
+}
+
+.mic-dot { -fx-stroke-width: 0; }
+.mic-on { -fx-fill: #00e676; -fx-effect: dropshadow(gaussian, #00e676, 10, 0.5, 0, 0); }
+.mic-off { -fx-fill: #455a64; }
+
+.mic-label {
+    -fx-text-fill: #9ec3dd;
+    -fx-min-width: 210px;
+}
+
+.last-command {
+    -fx-font-size: 13px;
+    -fx-text-fill: #e1f5fe;
+}
+
+.last-interpretation {
+    -fx-font-size: 12px;
+    -fx-text-fill: #4fc3f7;
+}
+
+.toggle-button {
+    -fx-background-color: linear-gradient(to bottom, #00b8d4, #0091ea);
+    -fx-text-fill: #021018;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-background-radius: 20;
+    -fx-padding: 9 26 9 26;
+    -fx-cursor: hand;
+}
+
+.toggle-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #18ffff, #00b0ff);
+}
+
+.toggle-button:disabled {
+    -fx-opacity: 0.45;
+}
